@@ -1,0 +1,23 @@
+iframe {
+  margin: 0 auto;
+}
+
+@media (max-width: 800px) {
+  iframe {
+    width: 80%;
+  }
+}
+
+@media (max-width: 500px) {
+  iframe {
+    margin-left: 0;
+    width: 95%;
+  }
+}
+
+@media (max-width: 321px) {
+  iframe {
+    min-height: 4rem;
+    width: 100%;
+  }
+}

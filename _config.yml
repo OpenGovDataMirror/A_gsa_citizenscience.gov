@@ -1,0 +1,182 @@
+# Site settings
+title: CitizenScience.gov
+description: CitizenScience.gov is an official government website designed to accelerate the use of crowdsourcing and citizen science across the U.S. government.
+url: "https://www.citizenscience.gov" # the base hostname & protocol for your site
+logo: /assets/img/logo-main.gif
+toolkit_logo: /assets/img/toolkit-images/toolkit-gray.png
+feature_image: /assets/img/hero-image.jpg
+
+colors:
+  background: '#ffffff'
+  link:
+    color: '#0071bc'
+    active: '#0071bc'
+    hover: '#205493'
+    visited: '#0071bc'
+  button:
+    background: '#0071bc'
+    hover: '#205493'
+    text: '#fff'
+  headers: '#205493'
+  text: '#212121'
+  reverse_text: '#ffffff'
+  projects:
+    accent: '#02bfe7'
+    card-heading: '#0071bc'
+  banner:
+    background: '#112e51'
+    text: '#fff'
+    button:
+      background: '#dce4ef'
+      text: '#112e51'
+  footer:
+    primary-background: '#f1f1f1'
+    secondary-background: '#d6d7d9'
+    text: '#212121'
+
+analytics:
+  google:
+    code: 'UA-48605964-32' # Change this to your GSA analytics code
+  dap:
+    agency: GSA
+
+defaults:
+ -
+  scope:
+    path: "" # an empty string here means all files in the project
+  values:
+    layout:
+      - base
+      - blog
+      - home
+      - page
+      - post
+      - "project-list"
+      - project
+      - "team-list"
+      - teammate
+
+forms:
+- type: newsletter
+  heading: Sign up to receive updates from our team
+  url: https://docs.google.com/forms/d/1Tsdm_2spbxWnmTFMrH5eHxpOAN9W4LB3eaMMXJ1N0rU/formResponse
+  button: Subscribe
+  privacypolicy: Your privacy and security are important to us, we'll only share your information as described in the <a href="http://www.gsa.gov/portal/content/116609">GSA Privacy and Security Notice</a>
+  fields:
+    - type: email
+      name: entry.1440502332
+      label: Email Address
+    - type: hidden
+      name: fbzx
+      value: -7861934959779167198
+
+footer:
+  links:
+      - text: 'Work'
+        href: '#'
+      - text: 'About'
+        href: '#'
+  image: /assets/img/gsa-logo-dark.jpg
+  contact:
+    name: 
+    email: CitizenScience@gsa.gov
+    twitter: fedcitsci
+    facebook: 
+    youtube: 
+    rss: 
+
+# Build settings
+plugins: 
+  - jekyll-paginate-v2
+markdown: kramdown
+include:
+  - _navigation.json
+exclude:
+  - CONTRIBUTING.md
+  - LICENSE.md
+  - README.
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - node_modules
+
+# Inititalize project and team collections
+collections:
+  projects:
+    output: true
+  team:
+    output: true
+  catalog-projects: 
+    output: true
+  how-to-steps:
+    output: true
+  case-study:
+    output: true
+  agencies:
+    output: true
+
+
+wds-version: 1.4.2
+
+
+
+############################################################
+# Site configuration for the Jekyll 3 Pagination Gem
+# The values here represent the defaults if nothing is set
+pagination:
+
+  # Site-wide kill switch, disabled here it doesn't run at all 
+  enabled: true
+
+  # Set to 'true' to enable pagination debugging. This can be enabled in the site config or only for individual pagination pages
+  debug: false
+
+  # The default document collection to paginate if nothing is specified ('posts' is default)
+  collection: 'posts'
+
+  # How many objects per paginated page, used to be `paginate` (default: 0, means all)
+  per_page: 5
+
+  # The permalink structure for the paginated pages (this can be any level deep)
+  permalink: '/page/:num/' # Pages are index.html inside this folder (default)
+  #permalink: '/page/:num.html' # Pages are simple html files 
+  #permalink: '/page/:num' # Pages are html files, linked jekyll extensionless permalink style.
+
+  # Optional the title format for the paginated pages (supports :title for original page title, :num for pagination page number, :max for total number of pages)
+  title: ':title - page :num'
+
+  # Limit how many pagenated pages to create (default: 0, means all)
+  limit: 0
+
+  # Optional, defines the field that the posts should be sorted on (omit to default to 'date')
+  sort_field: 'date'
+
+  # Optional, sorts the posts in reverse order (omit to default decending or sort_reverse: true)
+  sort_reverse: true
+
+  # Optional, the default category to use, omit or just leave this as 'posts' to get a backwards-compatible behavior (all posts)
+  category: 'posts'
+
+  # Optional, the default tag to use, omit to disable
+  tag: ''
+
+  # Optional, the default locale to use, omit to disable (depends on a field 'locale' to be specified in the posts, 
+  # in reality this can be any value, suggested are the Microsoft locale-codes (e.g. en_US, en_GB) or simply the ISO-639 language code )
+  locale: '' 
+
+ # Optional,omit or set both before and after to zero to disable. 
+ # Controls how the pagination trail for the paginated pages look like. 
+  trail: 
+    before: 2
+    after: 2
+
+  # Optional, the default file extension for generated pages (e.g html, json, xml).
+  # Internally this is set to html by default
+  extension: html
+
+  # Optional, the default name of the index file for generated pages (e.g. 'index.html')
+  # Without file extension
+  indexpage: 'index'
+
+############################################################
+

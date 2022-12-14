@@ -1,0 +1,34 @@
+---
+layout: catalog-base
+---
+
+<div class="parent-container">
+
+  <div class="entry-container">
+    <div class="entry-header-container">
+      <h2>{{ page.agency_sponsor }}</h2>
+      <p>{{ content }}</p>
+  </div>
+  <br>
+      <h3 class ="project-field">Number of Projects: {% include catalog-agency-project-count.html %}</h3>
+                      {% for item in site.catalog-projects %}
+                      {% if item.agency_sponsor contains page.agency_sponsor %}
+                    <div class="usa-width-one-whole agency-list">
+                      {% else %}
+                    <div style="display: none;">
+                      {% endif %}
+                      <article>
+                        <div class="infos">
+                          <a href="{{ item.url | prepend: site.baseurl }}" class="details">
+                            <h3 class="title">{{ item.project_name }}</h3>
+                          </a>
+                        </div>
+                      </article>
+                      </div>
+                      {% endfor %}
+                    </div>
+
+  </div>
+
+</div>
+

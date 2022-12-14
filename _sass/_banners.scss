@@ -1,0 +1,60 @@
+.usa-banner-header .usa-banner-inner > img {
+  padding-top: 3px;
+}
+
+.banner.tagline {
+  background-color: $banner-background-color;
+}
+.banner.tagline .usa-grid {
+  padding: 3rem;
+}
+.banner.tagline p {
+  color: $banner-text-color;
+  max-width: 80%;
+}
+.banner.tagline h2 {
+  color: $banner-text-color;
+}
+
+.banner.contact {
+  background-color: $banner-background-color;
+}
+.banner.contact form {
+  padding-top: 2em;
+}
+.banner.contact h2,
+.banner.contact p,
+.banner.contact legend,
+.banner.contact label,
+.banner.contact a,
+.banner.contact a:hover,
+.banner.contact a:visited {
+  color: $banner-text-color;
+}
+
+.banner .usa-button,
+.banner .usa-button-primary,
+.banner .usa-button:visited,
+.banner .usa-button-primary:visited,
+.banner button,
+.banner [type="button"],
+.banner [type="submit"],
+.banner [type="reset"] {
+  background-color: $banner-button-color;
+  color: $banner-button-text-color;
+}
+
+.banner-tagline-accent-color {
+  a {
+    color: #e87853;
+    &:hover {
+    color: white;
+    }
+    &:active {
+    color: white;
+    }
+    &:visited {
+    color: #e87853;
+    }
+  }
+}

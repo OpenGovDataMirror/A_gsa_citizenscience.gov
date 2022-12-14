@@ -1,0 +1,29 @@
+.page--banner {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 300px;
+  width: 100%;
+}
+.caption {
+  float: right;
+}
+
+.project-page--banner {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 200px;
+  width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+	.project-page--banner {
+		background-size: contain;
+	}
+
+}
+ 
+.header-margin-top {
+  margin-top: 1em !important;
+}

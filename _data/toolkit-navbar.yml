@@ -1,0 +1,34 @@
+assigned:
+
+    -
+        text: How To
+        href: pages/toolkit-howto.md
+        permalink: /toolkit/howto/
+        show_in_menu: true
+        show_in_footer: false
+    -
+        text: Case Studies
+        href: toolkit/toolkit-case-studies.md
+        permalink: /toolkit/case-study/
+        show_in_menu: true
+        show_in_footer: false
+    -
+        text: Resources
+        href: pages/toolkit-resource-library.md
+        permalink: /toolkit/resource-library/
+        show_in_menu: true
+        show_in_footer: false
+    -
+        text: Law & Policy
+        href: pages/toolkit-law-and-policy.md
+        permalink: /toolkit/law-and-policy/
+        show_in_menu: true
+        show_in_footer: false
+    -
+        text: CitizenScience.gov
+        href: pages/home.html
+        permalink: /
+        show_in_menu: true
+        show_in_footer: false
+
+unassigned: []

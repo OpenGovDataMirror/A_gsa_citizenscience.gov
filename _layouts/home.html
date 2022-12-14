@@ -1,0 +1,71 @@
+---
+layout: base
+---
+
+<section>
+  <div class="hero-unit" style="background-image: url('{{ page.hero-image | prepend: site.baseurl }}')">
+    <div class="usa-grid">
+      <div class="usa-width-whole hero-content">
+        <h1>{{ page.hero-text }}</h1>
+        <a class="usa-button" href="{{ page.hero-button-link | prepend: site.baseurl }}">{{ page.hero-button-text }}</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="usa-grid usa-section">
+    {% include projects.html %}
+</section>
+
+{% if page.banner-heading %}
+<section class="usa-section banner tagline">
+  <div class="usa-grid">
+    <div class="usa-width-one-whole usa-end-row">
+      <h2>{{ page.banner-heading }}</h2>
+      {% if page.banner-text %}
+        <p>{{ page.banner-text }}
+          <a class="card-read-dark-background" href="{{ site.baseurl }}/about/">Read more
+            <span class="usa-sr-only">about {{ project.title }}</span>
+          </a>
+        </p>
+      {% endif %}
+      {% if page.banner-button-text %}
+      <div class="center-content">
+        <a href="{{ page.banner-button-link | prepend: site.baseurl }}" class="usa-button">{{ page.banner-button-text }}</a>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+
+{% comment %}
+Blog Section
+{% endcomment %}
+<section class="usa-grid usa-section">
+    <h1 class="page-heading">
+      <a href="{{ site.baseurl }}/blog/">Blog</a>
+    </h1>
+    {% for post in site.posts limit: 3 %}
+    <div class="usa-grid  blog-section">
+        <div class="usa-width-one-third blog-list-image"><img src="{{ post.image | prepend: site.baseurl }}" alt="{{ post.title }}"   title="{{ post.title }}"></div>
+        <div class="usa-width-two-thirds">
+      <ul class="blog-list-body">
+          <li>
+            <h3>
+              <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+            </h3>
+            By: {{ post.author}}</br>
+            {{ post.date | date_to_long_string }}
+            {{ post.excerpt | truncatewords: 35 }}
+          </li>
+      </ul>
+    </div>
+  </div>
+        {% endfor %}
+<a class="card-read" href="{{ site.baseurl }}/blog/">
+        more blog stories
+        <span class="usa-sr-only">about {{ page.title }}</span>
+      </a>
+</section>
